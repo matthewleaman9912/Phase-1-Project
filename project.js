@@ -1,10 +1,9 @@
 //const { forEach } = require("lodash");
 
-let west = document.getElementById("west");
-let east = document.getElementById("east");
+//let west = document.getElementById("west");
+//let east = document.getElementById("east");
 
-document.addEventListener("DOMContentLoaded", (event) => {
-    event.preventDefault();
+document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("west").addEventListener("click", () => {
         fetch('https://www.balldontlie.io/api/v1/teams')
         .then(response => response.json())
@@ -15,10 +14,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
         .then(response => response.json())
         .then(datas => listingEast(datas))
         })
-    document.querySelector("form").addEventListener("submit", () => {
+    document.querySelector("form").addEventListener("submit", (event) => {
+        event.preventDefault();
         fetch('https://www.balldontlie.io/api/v1/teams')
         .then(response => response.json())
         .then(divisions => divisionSearch(divisions))
+        document.querySelector("form").reset();
     })
 })
 
@@ -29,7 +30,10 @@ function listingWest(datas) {
     let demo = [];
     demo = datas.data;
     const list = document.querySelector("main");
+    let title = document.createElement("h2")
+    title.innerText = "Western Conference"
     list.innerHTML = "";
+    list.appendChild(title);
     demo.forEach(team => {
         if (team.conference === "West") {
             const p = document.createElement("p");
@@ -62,7 +66,10 @@ function listingEast(datas) {
     let demo = [];
     demo = datas.data;
     const list = document.querySelector("main");
+    let title = document.createElement("h2")
+    title.innerText = "Eastern Conference"
     list.innerHTML = "";
+    list.appendChild(title);
     demo.forEach(team => {
         if (team.conference === "East") {
             const p = document.createElement("p");
@@ -92,5 +99,5 @@ function listingEast(datas) {
 }
 
 function divisionSearch(divisions) {
-    
+
 }
