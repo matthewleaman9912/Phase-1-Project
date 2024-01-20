@@ -102,10 +102,14 @@ function listingEast(datas) {
 function divisionSearch(divisions, inputInfo) {
     let allInfo = [];
     allInfo = divisions.data;
-    console.log(inputInfo.textContent)
-    allInfo.forEach(team => {
-        if (inputInfo === team.division) {
-            console.log(team.full_name)
-        }
-    })
+    if (inputInfo === "Southeast" || inputInfo === "Atlantic" || inputInfo === "Central" || inputInfo === "Pacific" || inputInfo === "Southwest" || inputInfo === "Northwest") {
+        allInfo.forEach(team => {
+            if (inputInfo === team.division) {
+                
+            }
+        })
+    }
+    else {
+        
+    }
 }
