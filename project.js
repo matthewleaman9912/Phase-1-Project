@@ -16,9 +16,10 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     document.querySelector("form").addEventListener("submit", (event) => {
         event.preventDefault();
+        let x = document.getElementById("searchByDivision").value;
         fetch('https://www.balldontlie.io/api/v1/teams')
         .then(response => response.json())
-        .then(divisions => divisionSearch(divisions))
+        .then(divisions => divisionSearch(divisions, x))
         document.querySelector("form").reset();
     })
 })
@@ -98,6 +99,13 @@ function listingEast(datas) {
     })
 }
 
-function divisionSearch(divisions) {
-
+function divisionSearch(divisions, inputInfo) {
+    let allInfo = [];
+    allInfo = divisions.data;
+    console.log(inputInfo.textContent)
+    allInfo.forEach(team => {
+        if (inputInfo === team.division) {
+            console.log(team.full_name)
+        }
+    })
 }
