@@ -102,14 +102,22 @@ function listingEast(datas) {
 function divisionSearch(divisions, inputInfo) {
     let allInfo = [];
     allInfo = divisions.data;
+    const list = document.querySelector("main");
+    let title = document.createElement("h2");
+    list.innerHTML = "";
     if (inputInfo === "Southeast" || inputInfo === "Atlantic" || inputInfo === "Central" || inputInfo === "Pacific" || inputInfo === "Southwest" || inputInfo === "Northwest") {
+        title.innerText = inputInfo + " Division Teams: ";
+        list.appendChild(title);
         allInfo.forEach(team => {
             if (inputInfo === team.division) {
-                
+                const p = document.createElement("p")
+                p.textContent = (team.full_name);
+                list.appendChild(p)
+                console.log(p)
             }
         })
     }
     else {
-        
+
     }
 }
