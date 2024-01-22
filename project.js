@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     document.getElementById("NBA").addEventListener("dblclick", () => {
         let audio = new Audio("Media/nba_on_nbc.mp3");
+        audio.volume = 0.1;
         audio.play();
         document.getElementById("NBA").addEventListener("dblclick", () => {
             audio.pause();
@@ -27,7 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     })
 })
-let audioCheck = 0;
 
 function listingWest(divisions) {
     const list = document.querySelector("main");
@@ -37,6 +37,9 @@ function listingWest(divisions) {
     title.innerText = "Western Conference";
     list.innerHTML = "";
     list.appendChild(title);
+    let x = document.createElement("img")
+    x.src = "Media/WesternNBA.webp";
+    list.append(x)
     allInfo.forEach(team => {
         if (team.conference === "West") {
             doIt(team);
@@ -106,8 +109,4 @@ function doIt (team) {
     p.textContent = team.full_name + "   ";
     p.appendChild(btn);
     list.appendChild(p);
-}
-
-function soundDeliver () {
-
 }
