@@ -3,12 +3,12 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("west").addEventListener("click", () => {
         fetch('https://www.balldontlie.io/api/v1/teams')
         .then(response => response.json())
-        .then(datas => listingWest(datas))
+        .then(divisions => listingWest(divisions))
         })
     document.getElementById("east").addEventListener("click", () => {
         fetch('https://www.balldontlie.io/api/v1/teams')
         .then(response => response.json())
-        .then(datas => listingEast(datas))
+        .then(divisions => listingEast(divisions))
         })
     document.querySelector("form").addEventListener("submit", (event) => {
         event.preventDefault();
@@ -18,46 +18,48 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(divisions => divisionSearch(divisions, x))
         document.querySelector("form").reset();
     })
+    document.getElementById("NBA").addEventListener("dblclick", (event) => {
+        let audio = document.getElementById("audio1");
+        audio.play()
+    })
 })
 
-//list = document.querySelector("main");
 
-
-function listingWest(datas) {
-    let demo = [];
-    demo = datas.data;
+function listingWest(divisions) {
     const list = document.querySelector("main");
-    let title = document.createElement("h2")
-    title.innerText = "Western Conference"
+    let title = document.createElement("h2");
+    let allInfo = [];
+    allInfo = divisions.data;
+    title.innerText = "Western Conference";
     list.innerHTML = "";
     list.appendChild(title);
-    demo.forEach(team => {
+    allInfo.forEach(team => {
         if (team.conference === "West") {
-            doIt(team)
+            doIt(team);
         }
     })
 }
 
-function listingEast(datas) {
-    let demo = [];
-    demo = datas.data;
+function listingEast(divisions) {
     const list = document.querySelector("main");
-    let title = document.createElement("h2")
-    title.innerText = "Eastern Conference"
+    let title = document.createElement("h2");
+    let allInfo = [];
+    allInfo = divisions.data;
+    title.innerText = "Eastern Conference";
     list.innerHTML = "";
     list.appendChild(title);
-    demo.forEach(team => {
+    allInfo.forEach(team => {
         if (team.conference === "East") {
-            doIt(team)
+            doIt(team);
         }
     })
 }
 
 function divisionSearch(divisions, inputInfo) {
-    let allInfo = [];
-    allInfo = divisions.data;
     const list = document.querySelector("main");
     let title = document.createElement("h2");
+    let allInfo = [];
+    allInfo = divisions.data;
     list.innerHTML = "";
     if (inputInfo === "Southeast" || inputInfo === "Atlantic" || inputInfo === "Central" || inputInfo === "Pacific" || inputInfo === "Southwest" || inputInfo === "Northwest") {
         title.innerText = inputInfo + " Division Teams: ";
@@ -69,9 +71,9 @@ function divisionSearch(divisions, inputInfo) {
         })
     }
     else {
-        const p = document.createElement("p")
-        p.textContent = "Please Try Again: Enter 'Southeast', 'Atlantic', 'Central', 'Pacific', 'Southwest', or 'Northwest' please!"
-        list.appendChild(p)
+        const p = document.createElement("p");
+        p.textContent = "Please Try Again: Enter 'Southeast', 'Atlantic', 'Central', 'Pacific', 'Southwest', or 'Northwest' please!";
+        list.appendChild(p);
 
     }   
 }
@@ -80,7 +82,7 @@ function doIt (team) {
     const list = document.querySelector("main");
     const p = document.createElement("p");
     const btn = document.createElement('button');
-    btn.textContent = "More Info"
+    btn.textContent = "More Info";
     btn.addEventListener("click", () => {
         const information = [];
         information[0] = "Abbreviation: " + team.abbreviation;
@@ -90,14 +92,18 @@ function doIt (team) {
         p.textContent = team.full_name + " Information:  ";
         for (let j = 0; j < 4; j++) {
             if(j < 3) {
-                p.append(information[j] + ",  ")
+                p.append(information[j] + ",  ");
             }
             else {
-                p.append(information[j])
+                p.append(information[j]);
             }
         }
     })
     p.textContent = team.full_name + "   ";
     p.appendChild(btn);
     list.appendChild(p);
+}
+
+function soundDeliver () {
+
 }
