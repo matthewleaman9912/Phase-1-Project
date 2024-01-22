@@ -19,8 +19,8 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelector("form").reset();
     })
     document.getElementById("NBA").addEventListener("dblclick", (event) => {
-        let audio = document.getElementById("audio1");
-        audio.play()
+        let audio = new Audio("Media/nba_on_nbc.mp3");
+        audio.play();
     })
 })
 
