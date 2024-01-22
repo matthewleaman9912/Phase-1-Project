@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 })
 
-
+//list = document.querySelector("main");
 
 
 function listingWest(datas) {
@@ -33,28 +33,7 @@ function listingWest(datas) {
     list.appendChild(title);
     demo.forEach(team => {
         if (team.conference === "West") {
-            const p = document.createElement("p");
-            const btn = document.createElement('button');
-            btn.textContent = "More Info"
-            btn.addEventListener("click", () => {
-                const information = [];
-                information[0] = "Abbreviation: " + team.abbreviation;
-                information[1] = "City: " + team.city;
-                information[2] = "Division: " + team.division;
-                information[3] = "Mascot Name: " + team.name;
-                p.textContent = team.full_name + " Information:  ";
-                for (let j = 0; j < 4; j++) {
-                    if(j < 3) {
-                        p.append(information[j] + ",  ")
-                    }
-                    else {
-                        p.append(information[j])
-                    }
-                }
-            })
-            p.textContent = team.full_name + "   ";
-            p.appendChild(btn);
-            list.appendChild(p);
+            doIt(team)
         }
     })
 }
@@ -69,28 +48,7 @@ function listingEast(datas) {
     list.appendChild(title);
     demo.forEach(team => {
         if (team.conference === "East") {
-            const p = document.createElement("p");
-            const btn = document.createElement('button');
-            btn.textContent = "More Info"
-            btn.addEventListener("click", () => {
-                const information = [];
-                information[0] = "Abbreviation: " + team.abbreviation;
-                information[1] = "City: " + team.city;
-                information[2] = "Division: " + team.division;
-                information[3] = "Mascot Name: " + team.name;
-                p.textContent = team.full_name + " Information:  ";
-                for (let j = 0; j < 4; j++) {
-                    if(j < 3) {
-                        p.append(information[j] + ",  ")
-                    }
-                    else {
-                        p.append(information[j])
-                    }
-                }
-            })
-            p.textContent = team.full_name + "   ";
-            p.appendChild(btn);
-            list.appendChild(p);
+            doIt(team)
         }
     })
 }
@@ -106,29 +64,7 @@ function divisionSearch(divisions, inputInfo) {
         list.appendChild(title);
         allInfo.forEach(team => {
             if (inputInfo === team.division) {
-                const p = document.createElement("p")
-                p.textContent = (team.full_name + " ");
-                const btn = document.createElement('button');
-                btn.textContent = "More Info"
-                btn.addEventListener("click", () => {
-                    const information = [];
-                    information[0] = "Abbreviation: " + team.abbreviation;
-                    information[1] = "City: " + team.city;
-                    information[2] = "Division: " + team.division;
-                    information[3] = "Mascot Name: " + team.name;
-                    p.textContent = team.full_name + " Information:  ";
-                    for (let j = 0; j < 4; j++) {
-                        if(j < 3) {
-                            p.append(information[j] + ",  ")
-                        }
-                        else {
-                            p.append(information[j])
-                        }
-                    }
-                })
-                p.appendChild(btn)
-                list.appendChild(p)
-                console.log(p)
+               doIt(team);
             }
         })
     }
@@ -138,4 +74,30 @@ function divisionSearch(divisions, inputInfo) {
         list.appendChild(p)
 
     }   
+}
+
+function doIt (team) {
+    const list = document.querySelector("main");
+    const p = document.createElement("p");
+    const btn = document.createElement('button');
+    btn.textContent = "More Info"
+    btn.addEventListener("click", () => {
+        const information = [];
+        information[0] = "Abbreviation: " + team.abbreviation;
+        information[1] = "City: " + team.city;
+        information[2] = "Division: " + team.division;
+        information[3] = "Mascot Name: " + team.name;
+        p.textContent = team.full_name + " Information:  ";
+        for (let j = 0; j < 4; j++) {
+            if(j < 3) {
+                p.append(information[j] + ",  ")
+            }
+            else {
+                p.append(information[j])
+            }
+        }
+    })
+    p.textContent = team.full_name + "   ";
+    p.appendChild(btn);
+    list.appendChild(p);
 }
