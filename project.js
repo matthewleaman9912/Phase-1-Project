@@ -1,7 +1,3 @@
-//const { forEach } = require("lodash");
-
-//let west = document.getElementById("west");
-//let east = document.getElementById("east");
 
 document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("west").addEventListener("click", () => {
@@ -111,13 +107,35 @@ function divisionSearch(divisions, inputInfo) {
         allInfo.forEach(team => {
             if (inputInfo === team.division) {
                 const p = document.createElement("p")
-                p.textContent = (team.full_name);
+                p.textContent = (team.full_name + " ");
+                const btn = document.createElement('button');
+                btn.textContent = "More Info"
+                btn.addEventListener("click", () => {
+                    const information = [];
+                    information[0] = "Abbreviation: " + team.abbreviation;
+                    information[1] = "City: " + team.city;
+                    information[2] = "Division: " + team.division;
+                    information[3] = "Mascot Name: " + team.name;
+                    p.textContent = team.full_name + " Information:  ";
+                    for (let j = 0; j < 4; j++) {
+                        if(j < 3) {
+                            p.append(information[j] + ",  ")
+                        }
+                        else {
+                            p.append(information[j])
+                        }
+                    }
+                })
+                p.appendChild(btn)
                 list.appendChild(p)
                 console.log(p)
             }
         })
     }
     else {
+        const p = document.createElement("p")
+        p.textContent = "Please Try Again: Enter 'Southeast', 'Atlantic', 'Central', 'Pacific', 'Southwest', or 'Northwest' please!"
+        list.appendChild(p)
 
-    }
+    }   
 }
