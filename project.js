@@ -18,12 +18,16 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(divisions => divisionSearch(divisions, x))
         document.querySelector("form").reset();
     })
-    document.getElementById("NBA").addEventListener("dblclick", (event) => {
+    document.getElementById("NBA").addEventListener("dblclick", () => {
         let audio = new Audio("Media/nba_on_nbc.mp3");
         audio.play();
+        document.getElementById("NBA").addEventListener("dblclick", () => {
+            audio.pause();
+            audio.currentTime = 0;
+        })
     })
 })
-
+let audioCheck = 0;
 
 function listingWest(divisions) {
     const list = document.querySelector("main");
