@@ -1,17 +1,20 @@
 
 document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("west").addEventListener("click", () => {
+        resetButton();
         fetch('https://www.balldontlie.io/api/v1/teams')
         .then(response => response.json())
         .then(divisions => listingWest(divisions))
         })
     document.getElementById("east").addEventListener("click", () => {
+        resetButton();
         fetch('https://www.balldontlie.io/api/v1/teams')
         .then(response => response.json())
         .then(divisions => listingEast(divisions))
         })
     document.querySelector("form").addEventListener("submit", (event) => {
         event.preventDefault();
+        resetButton();
         let x = document.getElementById("searchByDivision").value;
         fetch('https://www.balldontlie.io/api/v1/teams')
         .then(response => response.json())
@@ -115,4 +118,19 @@ function doIt (team) {
     p.textContent = team.full_name + "   ";
     p.appendChild(btn);
     list.appendChild(p);
+}
+
+function resetButton () {
+    let btn = document.createElement("button");
+    btn.textContent = "Reset";
+    let reset = document.getElementById("topOfPage");
+    reset.append(btn);
+    let list = document.querySelector("main");
+    btn.addEventListener("click", () => {
+        btn.remove();
+        list.innerHTML = "";
+        let pic = document.createElement("img");
+        pic.src = "Media/NBATeams.png";
+        list.append(pic);
+    })
 }
