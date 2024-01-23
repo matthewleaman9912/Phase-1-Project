@@ -37,9 +37,9 @@ function listingWest(divisions) {
     title.innerText = "Western Conference";
     list.innerHTML = "";
     list.appendChild(title);
-    let x = document.createElement("img")
-    x.src = "Media/WesternNBA.webp";
-    list.append(x)
+    let pic = document.createElement("img");
+    pic.src = "Media/WesternNBA.webp";
+    list.append(pic);
     allInfo.forEach(team => {
         if (team.conference === "West") {
             doIt(team);
@@ -55,6 +55,9 @@ function listingEast(divisions) {
     title.innerText = "Eastern Conference";
     list.innerHTML = "";
     list.appendChild(title);
+    let pic = document.createElement("img");
+    pic.src = "Media/EasternNBA.webp";
+    list.append(pic);
     allInfo.forEach(team => {
         if (team.conference === "East") {
             doIt(team);
@@ -71,6 +74,9 @@ function divisionSearch(divisions, inputInfo) {
     if (inputInfo === "Southeast" || inputInfo === "Atlantic" || inputInfo === "Central" || inputInfo === "Pacific" || inputInfo === "Southwest" || inputInfo === "Northwest") {
         title.innerText = inputInfo + " Division Teams: ";
         list.appendChild(title);
+        let pic = document.createElement("img");
+        pic.src = "Media/" + inputInfo + "NBA.png";
+        list.append(pic);
         allInfo.forEach(team => {
             if (inputInfo === team.division) {
                doIt(team);
