@@ -123,18 +123,21 @@ function doIt (team) {
 function resetButton () {
     let btn = document.createElement("button");
     btn.textContent = "Reset";
-    button1 = document.getElementById("west");
-    button2 = document.getElementById("east");
+    const button1 = document.getElementById("west");
+    const button2 = document.getElementById("east");
+    const submitButton = document.getElementById("searchByDivision1");
     let reset = document.getElementById("topOfPage");
-    reset.innerHTML = ""
+    reset.innerText = ""
     reset.append(btn);
+    submitButton.setAttribute("disabled", true);
     let list = document.querySelector("main");
     btn.addEventListener("click", () => {
         btn.remove();
-        reset.append(button1, button2);
         list.innerHTML = "";
+        reset.append(button1, button2);
         let pic = document.createElement("img");
         pic.src = "Media/NBATeams.png";
         list.append(pic);
+        submitButton.removeAttribute("disabled");
     })
 }
