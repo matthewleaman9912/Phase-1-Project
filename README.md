@@ -11,11 +11,11 @@
                 * A reset button to bring the page back to the home screen after a previous selection
                 * A secret surprise sound if the NBA logo is double-clicked
 
-![Alt text](Media/NBA.jpeg "Double Click Here on the application!!")
+![Alt text](Media/NBA.jpeg/200x150 "Double Click Here on the application!!")
 
 Along with the features, this application also displays an image relating to each of the possible entries. Two examples of these images are pictured below:
-![Alt text](Media/PacificNBA.png "Pacific division related the submission of 'Pacific' into the submit form")
-![Alt text](Media/WesternNBA.webp "Western conference image relating to the western conference button applied")
+![Alt text](Media/PacificNBA.png/200x150 "Pacific division related the submission of 'Pacific' into the submit form")
+![Alt text](Media/WesternNBA.webp/200x150 "Western conference image relating to the western conference button applied")
 
 
 This application uses the https://www.balldontlie.io/api/v1/teams/ API to sort and display the correct information for each selection made by the user.
