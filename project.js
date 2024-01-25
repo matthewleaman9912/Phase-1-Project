@@ -136,6 +136,12 @@ function doIt (team) {
     list.appendChild(p);
 }
 
+/*
+resetButton() disables other buttons after one is clicked,
+and presents a reset button that brings the user back to the 
+homepage of the application. After the reset button is clicked 
+the button disappears and the other buttons are able to be used again.
+*/
 function resetButton () {
     let btn = document.createElement("button");
     btn.textContent = "Reset";
