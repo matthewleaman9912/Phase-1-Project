@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("west").addEventListener("click", () => {
         resetButton();
@@ -90,7 +89,6 @@ function divisionSearch(divisions, inputInfo) {
         const p = document.createElement("p");
         p.textContent = "Please Try Again: Enter 'Southeast', 'Atlantic', 'Central', 'Pacific', 'Southwest', or 'Northwest' please!";
         list.appendChild(p);
-
     }   
 }
 
