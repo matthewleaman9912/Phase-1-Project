@@ -15,7 +15,7 @@
 
 ![Alt text](Media/NBA.jpeg "Double Click Here on the application!!")
 
-Along with the features, this application also displays an image relating to each of the possible entries. One possible form of user entry is through the "Western Conference" or "Eastern Conference" buttons, while the other form would be through the "Search By Division" submission feature. These two possibilities return team names containing basic information about the teams, accessible through buttons labelede "more info", and these type of images relating to the entry pictured below:
+ Along with the features, this application also displays an image relating to each of the possible entries. One possible form of user entry is through the "Western Conference" or "Eastern Conference" buttons, while the other form would be through the "Search By Division" submission feature. These two possibilities return team names containing basic information about the teams, accessible through buttons labelede "more info", and these type of images relating to the entry pictured below:
 ----------------------------------------------------------------------------
 ![Alt text](Media/PacificNBA.png "Pacific division related the submission of 'Pacific' into the submit form")
 ----------------------------------------------------------------------------
