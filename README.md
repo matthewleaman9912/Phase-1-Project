@@ -11,6 +11,8 @@
                 * A reset button to bring the page back to the home screen after a previous selection
                 * A secret surprise sound if the NBA logo is double-clicked
 
+![Alt text](Media/NBA.jpeg)
+Double Click Here on the application!!
 
 
 
