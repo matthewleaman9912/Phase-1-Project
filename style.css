@@ -1,7 +1,13 @@
 body {
     margin: 5%;
-    background-color:lightslategray;
     text-align: center;
+    background-color: lightsteelblue;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    border-image: url('Media/basketball.jpeg') 27 23 / 50px 30px / 1rem round;
+
 }
 
 .imageArea {
@@ -20,7 +26,7 @@ body > section > form {
 body > main > img {
     border: 3px solid black;
     padding: 10px;
-    width: 1000px;
+    width: 700px;
     height: 500px;
     text-align: center;
     background-color: blue;
