@@ -14,7 +14,7 @@
 ![Alt text](Media/NBA.jpeg "Double Click Here on the application!!")
 
 Along with the features, this application also displays an image relating to each of the possible entries. Two examples of these images are pictured below:
-![Alt text](Media/AtlanticNBA.png "Atlantic division related the submission of 'Atlantic' into the submit form")
+![Alt text](Media/PacificNBA.png "Pacific division related the submission of 'Pacific' into the submit form")
 ![Alt text](Media/WesternNBA.webp "Western conference image relating to the western conference button applied")
 
 
