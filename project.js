@@ -31,7 +31,11 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 })
 
-function listingWest(divisions) {
+/* 
+listingWest() takes in API information and lists teams in the western
+ conference to the screen
+ */
+function listingWest(divisions) { 
     const list = document.querySelector("main");
     let title = document.createElement("h2");
     let allInfo = [];
@@ -49,7 +53,11 @@ function listingWest(divisions) {
     })
 }
 
-function listingEast(divisions) {
+/* 
+listingEast() takes in API information and lists teams in the eastern 
+conference to the screen
+*/
+function listingEast(divisions) { 
     const list = document.querySelector("main");
     let title = document.createElement("h2");
     let allInfo = [];
@@ -67,7 +75,12 @@ function listingEast(divisions) {
     })
 }
 
-function divisionSearch(divisions, inputInfo) {
+/* 
+divisionSearch() takes in API information and user input from submit form
+ and lists the inputted division of the NBA with teams, or 
+ tells user to try again with suggestions of correct divisions
+ */
+function divisionSearch(divisions, inputInfo) { 
     const list = document.querySelector("main");
     let title = document.createElement("h2");
     let allInfo = [];
@@ -92,6 +105,11 @@ function divisionSearch(divisions, inputInfo) {
     }   
 }
 
+/* doIt() creates a button for each team that is listed either 
+after the western conference or eatern conference button is selected, 
+or after user input. Also, this function lets each button list attributes 
+about a selected team
+*/
 function doIt (team) {
     const list = document.querySelector("main");
     const p = document.createElement("p");
