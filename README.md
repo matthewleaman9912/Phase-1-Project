@@ -30,20 +30,48 @@ Lastly, this application displays a fun color scheme along with a border image o
 ============================================================================
 # Usage 
 ----------------------------------------------------------------------------
-![Alt text](Media/phase1project.mp4 "Video walkthrough of application")
-
-This video displays a user walking through each of the different features that this application offers, along with a visual representation of what exactly the formatting and layout of the application looks like. Each feature is explained and an example of how to use the application to access each feature is given in this video as well. There are audio explanations for each feature and there is a song representing the NBA that is played when the image at the top of the screen is double clicked, but I am not sure if this is evident in this video, as the sound would not upload with the video.
-
-
-
-
-This application uses the https://www.balldontlie.io/api/v1/teams/ API to sort and display the correct information for each selection made by the user. There are also images used in this application from the following sources:
-
+Link to video: 
                 *
-                *
-                *
-                *
-                *
+
+This video displays a user walking through each of the different features that this application offers, along with a visual representation of what exactly the formatting and layout of the application looks like. Each feature is explained and an example of how to use the application to access each feature is given in this video as well. Please visit this link to explore the video and gain understanding on the uses of this application!
+
+----------------------------------------------------------------------------
+# Code Examples
+
+The following code snippet is a function that takes information from the API server and the user input from the submission form to create a list of teams within the given Division:
+![Alt text](Media/divisionSearchFunction.png "division function snippet")
+
+The following code snippet is a function that creates a button for each team listed that allows the user to view more information about the selected team:
+![Alt text](Media/doItFunction.png "do it function snippet")
+
+These are just two examples of the code that makes this application work, hopefully these give some kind of insight on the inner workings of this application.
+
+===========================================================================
+# Citations
+
+This application uses the https://www.balldontlie.io/api/v1/teams/ API to sort and display the correct information for each team based on the selection made by the user. There are also images and an audio file used in this application from the following sources:
+
+                * Atlantic NBA Image: "https://fantasysixpack.net/2021-22-fantasy-basketball-division-preview-atlantic/"
+
+                * Basketball Image: "https://www.dreamstime.com/stock-photos-basketball-close-up-image16638533"
+
+                * Central NBA Image: "https://wausaupilotandreview.com/2023/10/17/bucks-look-to-set-the-pace-again-in-nbas-central-division-behind-giannis-lillard/"
+
+                * Eastern NBA Image: "https://www.foxsports.com/stories/nba/nba-eastern-conference-guide-nets-bucks-celtics-76ers-remain-contenders"
+
+                * NBA on NBC Audio: "https://www.youtube.com/watch?v=yMyYwoTMIgY"
+
+                * NBA teams image: "https://www.zenbusiness.com/blog/top-nba-teams-logos/"
+
+                * Northwest NBA Image: "https://fantasysixpack.net/2021-22-fantasy-basketball-division-preview-northwest/"
+
+                * Pacific NBA Image: "https://www.scoresandstats.com/gambling-news/2022-nba-pacific-division-futures-odds-and-picks/"
+
+                * Southeast NBA Image: "https://fantasysixpack.net/2023-24-fantasy-basketball-southeast-division-preview/"
+
+                * Southwest NBA Image: "https://fantasysixpack.net/2021-22-fantasy-basketball-division-preview-southwest/"
+
+                * Western NBA Image: "https://www.foxsports.com/stories/nba/nba-western-conference-guide-warriors-have-tough-road-to-repeat"
 
 
 
