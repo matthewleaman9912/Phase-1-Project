@@ -17,7 +17,7 @@
 ----------------------------------------------------------------------------
 
  Along with the features, this application also displays an image relating to each of the possible entries. One possible form of user entry is through the "Western Conference" or "Eastern Conference" buttons, while the other form would be through the "Search By Division" submission feature. These two possibilities return team names containing basic information about the teams, accessible through buttons labelede "more info", and these type of images relating to the entry pictured below:
- 
+
 ----------------------------------------------------------------------------
 ![Alt text](Media/PacificNBA.png "Pacific division related the submission of 'Pacific' into the submit form")
 ----------------------------------------------------------------------------
@@ -30,9 +30,9 @@ Lastly, this application displays a fun color scheme along with a border image o
 ============================================================================
 # Usage 
 ----------------------------------------------------------------------------
-insert video here
+![Alt text](Media/phase1project.mp4 "Video walkthrough of application")
 
-This video displays a user walking through each of the different features that this application offers, along with a visual representation of what exactly the formatting looks like. There is a song representing the NBA that is played when the image at the top of the screen is double clicked, but I am not sure if this is evident in this video. 
+This video displays a user walking through each of the different features that this application offers, along with a visual representation of what exactly the formatting and layout of the application looks like. Each feature is explained and an example of how to use the application to access each feature is given in this video as well. There are audio explanations for each feature and there is a song representing the NBA that is played when the image at the top of the screen is double clicked, but I am not sure if this is evident in this video, as the sound would not upload with the video.
 
 
 
