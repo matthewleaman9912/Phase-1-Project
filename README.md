@@ -31,7 +31,7 @@ Lastly, this application displays a fun color scheme along with a border image o
 # Usage 
 ----------------------------------------------------------------------------
 Link to video: 
-                *
+                *https://www.youtube.com/watch?v=1F3kU0y3xZ8
 
 This video displays a user walking through each of the different features that this application offers, along with a visual representation of what exactly the formatting and layout of the application looks like. Each feature is explained and an example of how to use the application to access each feature is given in this video as well. Please visit this link to explore the video and gain understanding on the uses of this application!
 
