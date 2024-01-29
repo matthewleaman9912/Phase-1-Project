@@ -48,7 +48,7 @@ function listingWest(divisions) {
     list.append(pic);
     allInfo.forEach(team => {
         if (team.conference === "West") {
-            doIt(team);
+            createButton(team);
         }
     })
 }
@@ -70,7 +70,7 @@ function listingEast(divisions) {
     list.append(pic);
     allInfo.forEach(team => {
         if (team.conference === "East") {
-            doIt(team);
+            createButton(team);
         }
     })
 }
@@ -94,7 +94,7 @@ function divisionSearch(divisions, inputInfo) {
         list.append(pic);
         allInfo.forEach(team => {
             if (inputInfo === team.division) {
-               doIt(team);
+               createButton(team);
             }
         })
     }
@@ -110,7 +110,7 @@ after the western conference or eatern conference button is selected,
 or after user input. Also, this function lets each button list attributes 
 about a selected team
 */
-function doIt (team) {
+function createButton (team) {
     const list = document.querySelector("main");
     const p = document.createElement("p");
     const btn = document.createElement('button');
