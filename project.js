@@ -31,10 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 })
 
-/* 
-listingWest() takes in API information and lists teams in the western
- conference to the screen
- */
+
 function listingWest(divisions) { 
     const list = document.querySelector("main");
     let title = document.createElement("h2");
@@ -53,10 +50,7 @@ function listingWest(divisions) {
     })
 }
 
-/* 
-listingEast() takes in API information and lists teams in the eastern 
-conference to the screen
-*/
+
 function listingEast(divisions) { 
     const list = document.querySelector("main");
     let title = document.createElement("h2");
@@ -75,11 +69,7 @@ function listingEast(divisions) {
     })
 }
 
-/* 
-divisionSearch() takes in API information and user input from submit form
- and lists the inputted division of the NBA with teams, or 
- tells user to try again with suggestions of correct divisions
- */
+
 function divisionSearch(divisions, inputInfo) { 
     const list = document.querySelector("main");
     let title = document.createElement("h2");
@@ -105,11 +95,7 @@ function divisionSearch(divisions, inputInfo) {
     }   
 }
 
-/* doIt() creates a button for each team that is listed either 
-after the western conference or eatern conference button is selected, 
-or after user input. Also, this function lets each button list attributes 
-about a selected team
-*/
+
 function createButton (team) {
     const list = document.querySelector("main");
     const p = document.createElement("p");
@@ -136,12 +122,7 @@ function createButton (team) {
     list.appendChild(p);
 }
 
-/*
-resetButton() disables other buttons after one is clicked,
-and presents a reset button that brings the user back to the 
-homepage of the application. After the reset button is clicked 
-the button disappears and the other buttons are able to be used again.
-*/
+
 function resetButton () {
     let btn = document.createElement("button");
     btn.textContent = "Reset";
